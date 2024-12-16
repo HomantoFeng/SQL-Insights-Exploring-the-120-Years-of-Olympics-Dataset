@@ -1,0 +1,26 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+rm(list=ls())
+library(tidyverse)
+library(data.table) 
+```
+
+###load data
+```{r}
+df_original <- fread('./athlete_events.csv')
+df <- fread('./athlete_events.csv')
+df_region<-fread('./noc_regions.csv')
+df[is.na(df)] <- "NULL"
+dt<-df %>% mutate(across(everything(),~ map_chr(.x, ~ gsub("\"", "", .x))))%>% as.data.table()
+
+fwrite(dt,'./athlete_events_convert.csv')
+```
+
