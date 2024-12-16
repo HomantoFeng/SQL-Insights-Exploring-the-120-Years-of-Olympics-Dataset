@@ -14,6 +14,6 @@ Before loading the dataset into MySQL Workbench, I performed some preprocessing 
 ## Data Analysis with SQL: Answering Key Questions
 
 ### How It Works:
-1. The SQL queries, combined into a single file (SQL_for_Q1-20.sql), were executed in MySQL Workbench using the cleaned dataset prepared during the preprocessing step.
+1. The SQL queries, combined into a single file ([SQL_for_Q1-20.sql](https://github.com/HomantoFeng/SQL-Insights-Exploring-the-120-Years-of-Olympics-Dataset/blob/main/SQL_for_Q1-20.sql)), were executed in MySQL Workbench using the cleaned dataset prepared during the preprocessing step.
 2. Each query is designed to answer a specific question, with results generated directly in MySQL Workbench for analysis and interpretation.
 
