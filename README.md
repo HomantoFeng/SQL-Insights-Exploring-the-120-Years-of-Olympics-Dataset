@@ -3,7 +3,7 @@ SQL Insights: Exploring the 120 Years of Olympics Dataset from Kaggle
 
 ## Data Preprocessing
 
-Before loading the dataset into MySQL Workbench, I performed some preprocessing in R (convert_table.rmd) to ensure the data was clean and compatible with SQL operations. This step was necessary to address common data inconsistencies and avoid errors during the import process.
+Before loading the dataset into MySQL Workbench, I performed some preprocessing in R ([convert_table.rmd](https://github.com/HomantoFeng/SQL-Insights-Exploring-the-120-Years-of-Olympics-Dataset/blob/main/convert_table.Rmd)) to ensure the data was clean and compatible with SQL operations. This step was necessary to address common data inconsistencies and avoid errors during the import process.
 
 ### Key Preprocessing Steps:
 1. Handling Missing Values:
