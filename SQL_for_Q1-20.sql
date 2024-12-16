@@ -124,7 +124,7 @@ where medal_rank<=5
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 ),
 medal_tb AS (SELECT region,sum(IF(ISNULL(Medal),0,1)) as medal_num
@@ -141,7 +141,7 @@ where medal_rank<=5
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 )
 
@@ -154,7 +154,7 @@ Order by Gold_num DESC,Silver_num DESC,Bronze_num DESC
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 )
 SELECT Games,region,sum(IF(Medal='Gold',1,0)) as Gold_num,sum(IF(Medal='Silver',1,0)) as Silver_num,sum(IF(Medal='Bronze',1,0)) as Bronze_num
@@ -166,7 +166,7 @@ Order by Games,region
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 ),
 
@@ -200,7 +200,7 @@ ORDER BY Games
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 ),
 
@@ -241,7 +241,7 @@ ORDER BY Games
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 )
 
@@ -256,7 +256,7 @@ Order by Gold_num DESC,Silver_num DESC,Bronze_num DESC
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 ),
 medal_num_by_noc as 
@@ -280,7 +280,7 @@ WHERE region='India' and medal_rank=1
 WITH add_country_info as 
 (
 SELECT *
-FROM schema_120_Olympics.athlete_events_convert2 JOIN schema_120_Olympics.noc_regions 
+FROM schema_120_Olympics.athlete_events_convert JOIN schema_120_Olympics.noc_regions 
 USING (NOC)
 )
 SELECT region, Games,count(*) as medals_Hockey
